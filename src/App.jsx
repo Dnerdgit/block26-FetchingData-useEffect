@@ -1,22 +1,13 @@
 import { useEffect, useState } from 'react'
-i
+import ContactList from './components/ContactList';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
     <>
-      <div>
-        
-      </div>
-      <h1>Vite + React</h1>
-      <div>
-
-      </div>
-
+      <ContactList />
+      
     </>
-  )
+  );
 }
-
-export default App

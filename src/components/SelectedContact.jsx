@@ -7,9 +7,11 @@ export default function ({ selectedContactId, setSelectedContactId}) {
     useEffect(() => {
         async function infoList(){
             try {
-                const response await fetch(
+                const response = await fetch(
                     `https://fsa=jsonplaceholder-69b5c48f1259.herokuapp.com/users/${selectedContactId}`
                 );
+            } catch (err) {
+                console.log(err);
             }
         }
     })
@@ -27,7 +29,7 @@ export default function ({ selectedContactId, setSelectedContactId}) {
                 <p>{contact.name}</p>
                 <p>{contact.email}</p>
                 <p>{contact.address.city}</p>
-            </div
+            </div>
         )}
     )
 }
